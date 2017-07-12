@@ -15,18 +15,20 @@
   * 来源于网络的图片
   * GitHub仓库中的图片
 * [链接](#链接)
-  * 文字超链接
-    * 链接外部URL
-    * 链接本仓库里的URL
-  * 锚点
+  * 链接外部URL
+  * 链接本仓库里的URL
   * [图片链接](#图片链接)
+  * 锚点
 * [列表](#列表)
   * 无序列表
   * 有序列表
   * 复选框列表
+* [表格](#表格)
+  * 使用表格
+  * 对齐
+  * 混合其他语法
 * [块引用](#块引用)
 * [代码高亮](#代码高亮)
-* [表格](#表格)
 * [表情](#表情)
 * [diff语法](#diff语法)
 * [参考资料](#参考资料)
@@ -129,14 +131,17 @@ ___
 ```
 ![alt](URL title)
 ```
-alt和title即对应HTML中的alt和title属性（都可省略）：
-- alt表示图片显示失败时的替换文本
-- title表示鼠标悬停在图片时的显示文本（注意这里要加引号）
+alt和title都可省略。alt和title对应HTML中的alt和title属性：
+* alt表示图片显示失败时的替换文本
+* title表示鼠标悬停在图片时的显示文本（注意title要有引号）
 
-URL即图片的url地址，如果引用本仓库中的图片，直接使用**相对路径**就可了，如果引用其他github仓库中的图片要注意格式，即：`仓库地址/raw/分支名/图片路径`，如：
-```
-https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
-```
+URL即图片的url地址。
+* 使用网络图片地址。
+* 引用本地仓库中的图片，直接使用**相对路径**就可了。
+* 引用其他github仓库中的图片，要注意格式：`仓库地址/raw/分支名/图片路径`，如：
+  ```
+  https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
+  ```
 
 |#|语法|效果
 |-|-|-
@@ -182,7 +187,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 |2|`[![](/images/zhihu.png "我的知乎，欢迎关注")][zhihu]`|[![](/images/zhihu.png "我的知乎，欢迎关注")][zhihu]
 |3|`[![csdn-logo]][csdn]`|[![csdn-logo]][csdn]
 
-因为图片本身和链接本身都支持URL标识符的形式，所以图片链接也可以很简洁（见例3）。  
+因为图片本身和链接本身都支持**URL标识符**的形式，所以图片链接也可以很简洁（见例3）。  
 注意，此时鼠标悬停时显示的文字是图片的title，而非链接本身的title了。
 
 ### 锚点
@@ -198,6 +203,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 ## 列表
 > 目前在GitHub中，英文空格和中文空格的效果不同，这会影响[换行](#换行)，以及[列表](#列表)。请尽量使用英文空格。
 ### 无序列表
+#### 使用无序列表
 语法：
 ```
 * 昵称：果冻虾仁
@@ -209,7 +215,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 * 别名：隔壁老王
 * 英文名：Jelly
 
-### 多级无序列表
+#### 多级无序列表
 语法：在`*`前加2、3或4个空格。
 ```
 * 编程语言
@@ -236,10 +242,8 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
       * OOP
 
 ### 有序列表
-#### 一般效果
-就是在数字后面加一个点，再加一个空格。不过看起来起来可能不够明显。
-
-语法：
+#### 使用有序列表
+语法：在数字后面加一个点，再加一个空格。
 ```
 面向对象的三个基本特征：
 1. 封装
@@ -252,8 +256,9 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 1. 封装
 2. 继承
 3. 多态
+
 #### 有序列表自动排序
-也可以在第一行指定`1. `，而接下来的几行用`1. `就可以了，它会自动显示成2、3、4…。
+在第一行指定`1. `，而接下来的几行用`1. `就可以了，它会自动显示成2、3、4…。
 
 面向对象的七大原则：
 1. 开闭原则
@@ -301,52 +306,8 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 - [ ] 测试
 - [ ] 交付
 
-您可以使用这个功能来标注某个项目各项任务的完成情况。
+可以使用这个功能来标注某个项目各项任务的完成情况。
 > Tip: GitHub的**issue**中，可以实时点击复选框来勾选或解除勾选，而无需修改issue原文。
-
-## 块引用
-
-### 常用于引用文本
-**文本摘自《深入理解计算机系统》 p. 27**
-　  令人吃惊的是，在哪种字节顺序是合适的这个问题上，人们表现得非常情绪化。实际上术语“little endian”（小端）和“big endian”（大端）出自Jonathan Swift的《格利佛游记》一书，其中交战的两个派别无法就应该从哪一端打开一个半熟的鸡蛋达成一致。因此，争论沦为关于社会政治的争论。只要选择了一种规则并且始终如一的坚持，其实对于哪种字节排序的选择都是任意的。
-> **“端”（endian）的起源**  
-以下是Jonathan Swift在1726年关于大小端之争历史的描述：  
-“……下面我要告诉你的是，Lilliput和Blefuscu这两大强国在过去36个月里一直在苦战。战争开始是由于以下的原因：我们大家都认为，吃鸡蛋前，原始的方法是打破鸡蛋较大的一端，可是当今的皇帝的祖父小时候吃鸡蛋，一次按古法打鸡蛋时碰巧将一个手指弄破了，因此他的父亲，当时的皇帝，就下了一道敕令，命令全体臣民吃鸡蛋时打破较小的一端，违令者重罚。”
-
-### 块引用有多级结构
-```
-> 数据结构
->> 树
->>> 二叉树
->>>> 平衡二叉树
->>>>> 满二叉树
-```
-> 数据结构
->> 树
->>> 二叉树
->>>> 平衡二叉树
->>>>> 满二叉树
-
-## 代码高亮
-在三个反引号后面加上编程语言的名字（如：`bash`，`java`，`javascript`，`c`，`cpp`，`c++`），另起一行开始写代码，最后一行是三个反引号。
-```bash
-echo "hello GitHub" #bash
-```
-```java
-public static void main(String[]args){} //java
-```
-```javascript
-document.getElementById("myH1").innerHTML="Welcome to my Homepage"; //javascipt
-```
-```c
-int main(int argc, char *argv[]) //c
-```
-```cpp
-string &operator+(const string& A,const string& B) //cpp
-```
-```c++
-string &operator+(const string& A,const string& B) //c++
-```
 
 ## 表格
 ### 使用表格
@@ -407,6 +368,49 @@ string &operator+(const string& A,const string& B) //c++
 |语法| 图片
 |-|-
 `![baidu][baidu-logo]`| ![baidu][baidu-logo]
+
+## 块引用
+### 常用于引用文本
+**文本摘自《深入理解计算机系统》 p. 27**
+　  令人吃惊的是，在哪种字节顺序是合适的这个问题上，人们表现得非常情绪化。实际上术语“little endian”（小端）和“big endian”（大端）出自Jonathan Swift的《格利佛游记》一书，其中交战的两个派别无法就应该从哪一端打开一个半熟的鸡蛋达成一致。因此，争论沦为关于社会政治的争论。只要选择了一种规则并且始终如一的坚持，其实对于哪种字节排序的选择都是任意的。
+> **“端”（endian）的起源**  
+以下是Jonathan Swift在1726年关于大小端之争历史的描述：  
+“……下面我要告诉你的是，Lilliput和Blefuscu这两大强国在过去36个月里一直在苦战。战争开始是由于以下的原因：我们大家都认为，吃鸡蛋前，原始的方法是打破鸡蛋较大的一端，可是当今的皇帝的祖父小时候吃鸡蛋，一次按古法打鸡蛋时碰巧将一个手指弄破了，因此他的父亲，当时的皇帝，就下了一道敕令，命令全体臣民吃鸡蛋时打破较小的一端，违令者重罚。”
+
+### 块引用有多级结构
+```
+> 数据结构
+>> 树
+>>> 二叉树
+>>>> 平衡二叉树
+>>>>> 满二叉树
+```
+> 数据结构
+>> 树
+>>> 二叉树
+>>>> 平衡二叉树
+>>>>> 满二叉树
+
+## 代码高亮
+在三个反引号后面加上编程语言的名字（如：`bash`，`java`，`javascript`，`c`，`cpp`，`c++`），另起一行开始写代码，最后一行是三个反引号。
+```bash
+echo "hello GitHub" #bash
+```
+```java
+public static void main(String[]args){} //java
+```
+```javascript
+document.getElementById("myH1").innerHTML="Welcome to my Homepage"; //javascipt
+```
+```c
+int main(int argc, char *argv[]) //c
+```
+```cpp
+string &operator+(const string& A,const string& B) //cpp
+```
+```c++
+string &operator+(const string& A,const string& B) //c++
+```
 
 ## 表情
 Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。比如`:blush:`，显示为:blush:。
