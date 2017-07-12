@@ -1,35 +1,35 @@
-README
-===========================
+# README
+
 该文件用来测试和展示书写README的各种markdown语法。GitHub的markdown语法在标准的markdown语法基础上做了扩充，称之为`GitHub Flavored Markdown`。简称`GFM`，GFM在GitHub上有广泛应用，除了README文件外，issues和wiki均支持markdown语法。
-****
-### Author:果冻虾仁
-### E-mail:Jelly.K.Wang@qq.com
-****
+***
+### [GitHub Guides: Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+### [Daring Fireball: Markdown Basics](https://daringfireball.net/projects/markdown/basics)
+***
 ## 目录
 * [横线](#横线)
 * [标题](#标题)
 * [文本](#文本)
-    * 普通文本
-    * 单行文本
-    * 多行文本
-    * 文字高亮
-    * 换行
-    * 斜体
-    * 粗体
-    * 删除线
+  * 普通文本
+  * 单行文本
+  * 多行文本
+  * 文字高亮
+  * 换行
+  * 斜体
+  * 粗体
+  * 删除线
 * [图片](#图片)
-    * 来源于网络的图片
-    * GitHub仓库中的图片
+  * 来源于网络的图片
+  * GitHub仓库中的图片
 * [链接](#链接) 
-    * 文字超链接
-        *  链接外部URL
-        *  链接本仓库里的URL
-    *  锚点
-    * [图片链接](#图片链接)
+  * 文字超链接
+    * 链接外部URL
+    * 链接本仓库里的URL
+  * 锚点
+  * [图片链接](#图片链接)
 * [列表](#列表)
-    * 无序列表
-    * 有序列表
-    * 复选框列表
+  * 无序列表
+  * 有序列表
+  * 复选框列表
 * [块引用](#块引用)
 * [代码高亮](#代码高亮)
 * [表格](#表格) 
@@ -37,7 +37,7 @@ README
 * [diff语法](#diff语法)
 
 ### 横线
------------
+
 ***、---、___可以显示横线效果
 
 ***
@@ -45,10 +45,8 @@ README
 ___
 
 
-
 标题
-------
-
+---
 # 一级标题  
 ## 二级标题  
 ### 三级标题  
@@ -56,9 +54,8 @@ ___
 ##### 五级标题  
 ###### 六级标题  
 
-
 文本
-------
+---
 ### 普通文本
 这是一段普通的文本
 ### 单行文本
@@ -88,15 +85,20 @@ ___
 ```
 效果：`linux` `网络编程` `socket` `epoll`
 
-也适合做一篇文章的tag
+也适合做一篇文章的标签（tag）
 #### 换行
-直接回车不能换行，  
+直接回车不能换行，
 可以在上一行文本后面补两个空格，  
 这样下一行的文本就换行了。
 
-或者就是在两行文本直接加一个空行。
+或者就是在两行文本直接加一个空行，
 
 也能实现换行效果，不过这个行间距有点大。
+
+GFM语法里，直接回车到底能不能
+换行？
+GFM语法里，直接回车到底能不能，
+换行？
 #### 斜体、粗体、删除线
 |语法|效果|
 |----|-----|
@@ -113,7 +115,7 @@ ___
     斜体、粗体、删除线可混合使用
 
 图片
-------
+---
 基本格式：
 ```
 ![alt](URL title)
@@ -128,7 +130,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 ```
 
 |#|语法|效果|
-|---|---|----
+|---|---|---
 |1|`![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")`|![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")
 |2|`![][foryou]`|![][foryou]
 
@@ -139,7 +141,7 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 ```
 
 链接
-------
+---
 ### 链接外部URL
 |#|语法|效果|
 |---|----|-----|
@@ -191,8 +193,8 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 
 ### 多级无序列表
 * 编程语言
-    * 脚本语言
-        * Python
+  * 脚本语言
+    * Python
 
 ### 有序列表
 #### 一般效果
@@ -204,13 +206,14 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 3. 多态
 
 #### 有序列表自动排序
-也可以在第一行指定`1. `，而接下来的几行用星号`*`（或者继续用数字1. ）就可以了，它会自动显示成2、3、4……。    
+~~也可以在第一行指定`1. `，而接下来的几行用星号`*`（或者继续用数字1. ）就可以了，它会自动显示成2、3、4……。~~
+`*`不可行，只能用`1. `
 面向对象的七大原则：
 
 1. 开闭原则
-* 里氏转换原则
-* 依赖倒转原则
-* 接口隔离原则
+1. 里氏转换原则
+1. 依赖倒转原则
+1. 接口隔离原则
 * 组合/聚合复用原则
 * “迪米特”法则
 * 单一职责原则
@@ -220,8 +223,8 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 
 1. 这是一级的有序列表，数字1还是1
    1. 这是二级的有序列表，阿拉伯数字在显示的时候变成了罗马数字
-      1. 这是三级的有序列表，数字在显示的时候变成了英文字母
-	    1. 四级的有序列表显示效果，就不再变化了，依旧是英文字母
+   1. 这是三级的有序列表，数字在显示的时候变成了英文字母
+   1. 四级的有序列表显示效果，就不再变化了，依旧是英文字母
 
 ### 复选框列表
 - [x] 需求分析
@@ -232,8 +235,8 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 - [ ] 交付
 
 您可以使用这个功能来标注某个项目各项任务的完成情况。
-> Tip:
->> 在GitHub的**issue**中使用该语法是可以实时点击复选框来勾选或解除勾选的，而无需修改issue原文。
+>Tip:
+>>在GitHub的**issue**中使用该语法是可以实时点击复选框来勾选或解除勾选的，而无需修改issue原文。
 
 ## 块引用
 
@@ -245,14 +248,14 @@ https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif
 “……下面我要告诉你的是，Lilliput和Blefuscu这两大强国在过去36个月里一直在苦战。战争开始是由于以下的原因：我们大家都认为，吃鸡蛋前，原始的方法是打破鸡蛋较大的一端，可是当今的皇帝的祖父小时候吃鸡蛋，一次按古法打鸡蛋时碰巧将一个手指弄破了，因此他的父亲，当时的皇帝，就下了一道敕令，命令全体臣民吃鸡蛋时打破较小的一端，违令者重罚。”
 
 ### 块引用有多级结构
-> 数据结构
->> 树
->>> 二叉树
->>>> 平衡二叉树
->>>>> 满二叉树
+>数据结构
+>>树
+>>>二叉树
+>>>>平衡二叉树
+>>>>>满二叉树
 
 代码高亮
-----------
+---
 在三个反引号后面加上编程语言的名字，另起一行开始写代码，最后一行再加上三个反引号。
 ```Java
 public static void main(String[]args){} //Java
@@ -299,6 +302,7 @@ string &operator+(const string& A,const string& B) //cpp
 | ------------- | ----------- |
 | Help      | ~~Display the~~ help window.|
 | Close     | _Closes_ a window     |
+
 #### 表格中嵌入图片（链接）
 其实前面介绍图片显示、图片链接的时候为了清晰就是放在在表格中显示的。
 
@@ -307,14 +311,14 @@ string &operator+(const string& A,const string& B) //cpp
 |![baidu][baidu-logo] | 百度|
 
 表情
-----------
+---
 Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。
 
 比如`:blush:`，可以显示:blush:。
 
 具体每一个表情的符号码，可以查询GitHub的官方网页[http://www.emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com)。
 
-但是这个网页每次都打开**奇慢**。。所以我整理到了本repo中，大家可以直接在此查看[emoji](./emoji.md)。
+但是这个网页每次都打开**奇慢**，所以我整理到了本repo中，大家可以直接查看[emoji](./emoji.md)。
 
 diff语法
 ---------
@@ -331,9 +335,7 @@ GFM中可以显示的展示diff效果。使用绿色表示新增，红色表示�
 - 鸟宿池边树，僧推月下门
 ```
 
-
-
---------------------------------
+---
 [csdn]:http://blog.csdn.net/guodongxiaren "我的博客"
 [zhihu]:https://www.zhihu.com/people/jellywong "我的知乎，欢迎关注"
 [weibo]:http://weibo.com/linpiaochen
